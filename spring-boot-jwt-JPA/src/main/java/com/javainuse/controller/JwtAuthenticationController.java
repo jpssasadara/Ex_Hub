@@ -45,7 +45,7 @@ public class JwtAuthenticationController {
 		// "UserDetails" => class
 		final UserDetails userDetails = userDetailsService
 				.loadUserByUsername(authenticationRequest.getUsername());
-		// Generating the Token using UserDetails object data (Really it has been used only user name)
+		// Generating the Token using UserDetails object data (Really it has been used only user name(in this example) so we can customized it as we want
 		final String token = jwtTokenUtil.generateToken(userDetails);
 		// fixed token Response and return the token
 		return ResponseEntity.ok(new JwtResponse(token));
