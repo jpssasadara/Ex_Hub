@@ -35,12 +35,22 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
         Suppose you want to redirect all ip to auth-failed
         which ip value starts with "192"
         */
-        if(request.getRemoteAddr().startsWith("192")) {
-            response.sendRedirect("/auth-failed"); //redirect to default
+        //request.getRemoteAddr().startsWith("192")
+        if(request.getRequestURI().equals("/Testing")) {
+            System.out.println("Request URL ---> "+request.getRequestURI());
+            if(request.getHeader("Authentication").equals("epicPOS")){
+                System.out.println("Ok --->>> Authentication Header is verified !!! ");
+            }else{
+                System.out.println("Invalied Authentication Header !!! ");
+            }
+            //System.out.println("IP---"+request.getRemoteUser());
+            System.out.println("IP Address ---> "+request.getLocalAddr());
+            response.sendRedirect("/secure-code/public"); //redirect to default
             return false; //returning false ensure that the request is not
             // further required to be intercepted,
             // response is directly send to the user hereafter.
         }
+        System.out.println("request.getRemoteAddr().startsWith(\"192\") "+request.getRemoteAddr());
         return  true;
         //return new LogInterceptor().preHandle(request, response, handler);
     }

@@ -38,6 +38,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
             return false; //returning false ensure that the request is not further required to be intercepted,
             // response is directly send to the user hereafter.
         }
+
         return  true;
         //return new LogInterceptor().preHandle(request, response, handler);
     }

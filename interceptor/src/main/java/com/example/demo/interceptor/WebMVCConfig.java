@@ -14,6 +14,7 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
 
         registry.addInterceptor(new LogInterceptor())
                 .addPathPatterns("/secure-code")
+                .addPathPatterns("/Testing")
                 .excludePathPatterns("/secure-code/public"); //by default applies to
         registry.addInterceptor(new AuthInterceptor()).addPathPatterns("/auth");
 
