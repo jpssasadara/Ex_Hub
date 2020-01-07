@@ -13,6 +13,6 @@ https://www.youtube.com/watch?v=soGRyl9ztjI&list=PLqq-6Pq4lTTYTEooakHchTGglSvkZA
 interceptor
 https://evisioncsse.blogspot.com/2020/01/intercepting-incoming-requests-using.html
 
-![Image 1](link-to-image)
+![Image 1](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200107_175440.jpg)
 ![Image 2](link-to-image)
 ![Image 3](link-to-image)
