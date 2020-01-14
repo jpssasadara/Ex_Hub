@@ -4,5 +4,5 @@ import com.epic.pos.posApp.Mapping.Status;
 
 public interface StatusDao {
 
-    public Status findById(int theId);
+    public Status findById(String theId) throws Exception;
 }

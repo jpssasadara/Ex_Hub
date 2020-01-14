@@ -13,7 +13,7 @@ public class StatusServiceImpl implements StatusService {
     public StatusDao statusDao;
     @Transactional
     @Override
-    public Status findById(int theId) {
+    public Status findById(String theId) throws Exception{
        return statusDao.findById(theId);
     }
 }

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/Register/RegisterDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/Register/RegisterDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JWT_Authentication_final_final/src/app/service/auth-gaurd.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../JWT_Authentication_final_final/src/app/service/auth-gaurd.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JWT_Authentication_final_final_spring/ang-spring-boot-jwt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JWT_Authentication_final_final_spring/ang-spring-boot-jwt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

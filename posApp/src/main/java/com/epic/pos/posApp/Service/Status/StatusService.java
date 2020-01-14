@@ -5,5 +5,5 @@ import com.epic.pos.posApp.Mapping.Userrole;
 
 public interface StatusService {
 
-    public Status findById(int theId);
+    public Status findById(String theId) throws Exception;
 }
