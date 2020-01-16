@@ -1,4 +1,6 @@
 package com.epic.pos.posApp.RestApis;
+import com.epic.pos.posApp.Mapping.Users;
+import com.epic.pos.posApp.Messagebean.Login.LoginDataBean;
 import com.epic.pos.posApp.Messagebean.Login.LoginInputBean;
 import com.epic.pos.posApp.Service.Login.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +34,18 @@ public class LoginRest {
             ReturnValue = "Not";
         }
         return ReturnValue;
+    }
+
+    @GetMapping("/GetUserbyUsername/{username}")
+    public LoginDataBean Getuserbyusername(@PathVariable String username){
+        LoginDataBean userDetails = null;
+        try{
+            userDetails = loginService.findUserByUsername(username);
+        }catch(Exception ex){
+            userDetails =null;
+        }
+        return userDetails;
+
     }
 
 
