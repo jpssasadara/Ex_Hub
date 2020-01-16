@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25f5f6fb-cb57-4a22-a554-c276a070f6b6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Messagebean/Login/LoginInputBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JWT_Authentication_final_final_spring/ang-spring-boot-jwt/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../JWT_Authentication_final_final_spring/ang-spring-boot-jwt/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Mapping/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Mapping/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,6 +32,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -104,7 +110,8 @@
       <workItem from="1576816657212" duration="329000" />
       <workItem from="1577088619304" duration="92000" />
       <workItem from="1578281521709" duration="5975000" />
-      <workItem from="1579003223581" duration="508000" />
+      <workItem from="1579003223581" duration="1720000" />
+      <workItem from="1579146160766" duration="2164000" />
     </task>
     <servers />
   </component>
@@ -116,7 +123,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
