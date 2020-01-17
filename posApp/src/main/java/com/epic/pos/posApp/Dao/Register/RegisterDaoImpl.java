@@ -6,6 +6,7 @@ import com.epic.pos.posApp.Service.Status.StatusService;
 import com.epic.pos.posApp.Service.UserRoleMgt.UserRoleMgtService;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -28,6 +29,9 @@ public class RegisterDaoImpl implements RegisterDao {
     public UserRoleMgtService userRoleMgtService;
     @Autowired
     public StatusService statusService;
+
+    @Autowired
+    private PasswordEncoder bcryptEncoder;
 
     @Override
     public void save(RegisterInputBean inputBean) throws Exception {
@@ -75,7 +79,7 @@ public class RegisterDaoImpl implements RegisterDao {
             e.printStackTrace();
         }
         //#######################################################
-        user.setPassword(inputBean.getPassword());
+        user.setPassword(bcryptEncoder.encode(inputBean.getPassword()));
         user.setLastupdateduser("Admin");
         //######################### Date (lastupdatedtime)########################
         try {

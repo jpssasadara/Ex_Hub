@@ -1,7 +1,6 @@
 package com.epic.pos.posApp.Service.Login;
 
 import com.epic.pos.posApp.Dao.Login.LoginDao;
-import com.epic.pos.posApp.Mapping.Users;
 import com.epic.pos.posApp.Messagebean.Login.LoginDataBean;
 import com.epic.pos.posApp.Messagebean.Login.LoginInputBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +21,8 @@ public class LoginServiceImpl implements LoginService{
 
     @Override
     @Transactional
-    public LoginDataBean findUserByUsername(String username) throws Exception {
-        return loginDao.findUserByUsername(username);
+    public LoginDataBean findByUsername(String username) throws Exception {
+        return loginDao.findByUsername(username);
     }
+
 }

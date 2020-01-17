@@ -4,6 +4,8 @@ import com.epic.pos.posApp.Mapping.Users;
 import com.epic.pos.posApp.Messagebean.Login.LoginDataBean;
 import com.epic.pos.posApp.Messagebean.Login.LoginInputBean;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
 
 
@@ -56,7 +58,7 @@ public class LoginDaoImpl implements LoginDao {
     }
 
     @Override
-    public LoginDataBean findUserByUsername(String username) throws Exception{
+    public LoginDataBean findByUsername(String username) throws Exception{
         String Qry = "SELECT u FROM Users u  WHERE u.username = :usernamek ";
         Users theuser = null;
         // get User
@@ -78,9 +80,8 @@ public class LoginDaoImpl implements LoginDao {
             loginDataBean.setLastupdateduser(theuser.getLastupdateduser());
             loginDataBean.setLastupdatedtime(theuser.getLastupdatedtime().toString());
             loginDataBean.setCreatedtime(theuser.getCreatedtime().toString());
-            //System.out.println("JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ =>"+theuser.getPassword());
+
         }
-       // return theuser;
         return loginDataBean;
     }
 
