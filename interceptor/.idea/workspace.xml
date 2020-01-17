@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="" />
+    <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../JWT_Authentication_final_final_spring/.idea/JWT_Authentication_final_final_spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +92,7 @@
       <workItem from="1578375146180" duration="7042000" />
       <workItem from="1578453691681" duration="780000" />
       <workItem from="1578545973239" duration="770000" />
+      <workItem from="1579234276295" duration="3728000" />
     </task>
     <servers />
   </component>
@@ -99,7 +104,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
