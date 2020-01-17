@@ -16,7 +16,15 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
                 .addPathPatterns("/login/GetUserbyUsername/*")
                 .addPathPatterns("/Testing")
                 .excludePathPatterns("/secure-code/public"); //by default applies to
-        registry.addInterceptor(new AuthInterceptor()).addPathPatterns("/auth");
+        registry.addInterceptor(new AuthInterceptor())
+                .addPathPatterns("/auth");
+
+        // ################################ New Interceptors ###########################################################
+        //##############################################################################################################
+        registry.addInterceptor(new PageTaskAuthInterceptor())
+                .addPathPatterns("/ViewUserRole/SEARCH/*");
+        //##############################################################################################################
+        //##############################################################################################################
 
         // Register admin interceptor with multiple path patterns
         /*registry.addInterceptor(new LogInterceptor())

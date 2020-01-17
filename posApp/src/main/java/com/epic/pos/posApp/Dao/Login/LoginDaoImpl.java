@@ -4,14 +4,11 @@ import com.epic.pos.posApp.Mapping.Users;
 import com.epic.pos.posApp.Messagebean.Login.LoginDataBean;
 import com.epic.pos.posApp.Messagebean.Login.LoginInputBean;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Repository;
-
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-import java.util.ArrayList;
+
 
 @Repository
 public class LoginDaoImpl implements LoginDao {
