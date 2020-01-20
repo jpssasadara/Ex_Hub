@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/Jwt/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/Jwt/JwtUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/config/JwtTokenUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
