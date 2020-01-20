@@ -1,7 +1,12 @@
 package com.epic.pos.posApp.Interceptor;
 
+import com.epic.pos.posApp.Dao.CheckPermission.CheckPermissionDao;
+import com.epic.pos.posApp.Dao.CheckPermission.CheckPermissionDaoImpl;
+import com.epic.pos.posApp.Service.CheckPermission.CheckPermissionService;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -11,7 +16,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+
 public class PageTaskAuthInterceptor  extends HandlerInterceptorAdapter {
+
+    @Autowired
+    public CheckPermissionService checkPermissionService;
+
     private final org.slf4j.Logger Logger = LoggerFactory.getLogger(this.getClass());
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception
@@ -30,8 +40,8 @@ public class PageTaskAuthInterceptor  extends HandlerInterceptorAdapter {
             if(request.getHeader("Authentication2").equals("epicPOS")){
                 System.out.println("Ok --->>> Authentication Header is verified !!! ");
                 // Check Permission ==> input(username,pageUrl,pageTaskCode)==> Output--> has Permission or not
-
-                return true;
+                //return true;
+                return checkPermissionService.HasPermission("ViewUserRole","SEARCH","1");
             }else{
                 System.out.println("Invalied Authentication Header !!! ");
                 return false;

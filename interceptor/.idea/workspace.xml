@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/Login/LoginDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/Login/LoginDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/WebMVCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/WebMVCConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +28,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../posApp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,6 +97,7 @@
       <workItem from="1578453691681" duration="780000" />
       <workItem from="1578545973239" duration="770000" />
       <workItem from="1579234276295" duration="3728000" />
+      <workItem from="1579491650004" duration="1998000" />
     </task>
     <servers />
   </component>

@@ -12,7 +12,7 @@ public class CheckPermissionServiceImpl implements CheckPermissionService {
     public CheckPermissionDao checkPermissionDao;
     @Override
     @Transactional
-    public boolean HasPermission(String pageUrl, String pageTaskCode, String userName) {
-        return checkPermissionDao.HasPermission(pageUrl,pageTaskCode,userName);
+    public boolean HasPermission(String pageUrl, String pageTaskCode, String role) {
+        return checkPermissionDao.HasPermission(pageUrl,pageTaskCode,role);
     }
 }
