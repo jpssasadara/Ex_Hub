@@ -3,6 +3,7 @@ package com.epic.pos.posApp.Interceptor;
 import com.epic.pos.posApp.Dao.CheckPermission.CheckPermissionDao;
 import com.epic.pos.posApp.Dao.CheckPermission.CheckPermissionDaoImpl;
 import com.epic.pos.posApp.Service.CheckPermission.CheckPermissionService;
+import com.epic.pos.posApp.config.JwtTokenUtil;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.Nullable;
@@ -22,6 +23,9 @@ public class PageTaskAuthInterceptor  extends HandlerInterceptorAdapter {
     @Autowired
     public CheckPermissionService checkPermissionService;
 
+    @Autowired
+    public JwtTokenUtil jwttokenUtil;
+
     private final org.slf4j.Logger Logger = LoggerFactory.getLogger(this.getClass());
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception
@@ -35,27 +39,24 @@ public class PageTaskAuthInterceptor  extends HandlerInterceptorAdapter {
         Logger.info("----------------LogInterceptor PreHandle(End)--------------------------");
         //responseHeader can be modified similiarly as per need
 
-        if(request.getRequestURI().contains("/ViewUserRole/SEARCH")) {
-            System.out.println("Request URL ---> "+request.getRequestURI());
-            if(request.getHeader("Authentication2").equals("epicPOS")){
-                System.out.println("Ok --->>> Authentication Header is verified !!! ");
-                // Check Permission ==> input(username,pageUrl,pageTaskCode)==> Output--> has Permission or not
-                //return true;
-                return checkPermissionService.HasPermission("ViewUserRole","SEARCH","1");
-            }else{
-                System.out.println("Invalied Authentication Header !!! ");
-                return false;
-            }
-            //System.out.println("IP---"+request.getRemoteUser());
-            //System.out.println("IP Address ---> "+request.getLocalAddr());
-            //returning false ensure that the request is not
-            // further required to be intercepted,
-            // response is directly send to the user hereafter.
-        }
-        System.out.println("request.getRemoteAddr().startsWith(\"192\") "+request.getRemoteAddr());
-        response.sendRedirect("/secure-code/public"); //redirect to default
-        return  false;
-        //return new LogInterceptor().preHandle(request, response, handler);
+
+        System.out.println("Request URL ---> "+request.getRequestURI());
+        //System.out.println(" Authentication Header is being Not Used only for Testing !!! " + request.getHeader("TestingHeader"));
+        System.out.println(" Authentication Header JWT Token  !!! " + request.getHeader("Authorization"));
+        String jwtTokenFormHeader = request.getHeader("Authorization").substring(7);
+
+        // Check Permission ==> input(pageUrl,pageTaskCode,userRole)==> Output--> has Permission or not
+        String pageUrl=request.getRequestURI().split("/")[1];
+        System.out.println("SA pageUrl => "+pageUrl);
+        String pageTaskCode=request.getRequestURI().split("/")[2];
+        System.out.println("SA pageTaskCode => "+pageTaskCode);
+        String role = jwttokenUtil.getUserRoleFromToken(jwtTokenFormHeader);
+
+        System.out.println("User role get from JWT Token in the Interceptor ++ > "+ jwttokenUtil.getUserRoleFromToken(jwtTokenFormHeader));
+                                               // (pageUrl,pageTaskCode,userRole)
+        return checkPermissionService.HasPermission(pageUrl,pageTaskCode,role);
+
+
     }
 
     @Override

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="42f76074-cc31-4b5d-8699-129e47d91391" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Dao/CheckPermission/CheckPermissionDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/PageTaskAuthInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/WebMVCConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Interceptor/WebMVCConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/CheckPermission/CheckPermissionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-jwt-JPA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/RestApis/LoginRest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/Jwt/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/Service/Jwt/JwtUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../posApp/src/main/java/com/epic/pos/posApp/config/JwtTokenUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

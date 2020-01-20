@@ -36,7 +36,22 @@ public class JwtUserDetailsService implements UserDetailsService {
 		return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(),
 				new ArrayList<>());
 	}
-	
+
+	// this method is for fixing user details to the JWT token
+	public LoginDataBean loadAllDetailsOfLoggedUserByUsername(String username) throws UsernameNotFoundException {
+		LoginDataBean user = null;
+		try {
+			user = userDao.findByUsername(username);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if (user == null) {
+			throw new UsernameNotFoundException("User not found with username: " + username);
+		}
+		return user;
+	}
+
+
 	/*public DAOUser save(UserDTO user) {
 		DAOUser newUser = new DAOUser();
 		newUser.setUsername(user.getUsername());
