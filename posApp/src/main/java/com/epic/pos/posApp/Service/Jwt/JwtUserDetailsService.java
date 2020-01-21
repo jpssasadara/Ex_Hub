@@ -37,7 +37,7 @@ public class JwtUserDetailsService implements UserDetailsService {
 				new ArrayList<>());
 	}
 
-	// this method is for fixing user details to the JWT token
+	// this method is for fixing user details to the JWT token for add userid to the JWT token in loginRest Api when generateToken function is called
 	public LoginDataBean loadAllDetailsOfLoggedUserByUsername(String username) throws UsernameNotFoundException {
 		LoginDataBean user = null;
 		try {

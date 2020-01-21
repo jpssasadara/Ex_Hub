@@ -14,5 +14,5 @@ interceptor
 https://evisioncsse.blogspot.com/2020/01/intercepting-incoming-requests-using.html
 
 ![Image 1](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200107_175440.jpg)
-![Image 2](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200120_160817.jpg)
+![Image 2](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200121_162642.jpg)
 ![Image 3](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200107_175520.jpg)
