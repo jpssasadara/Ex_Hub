@@ -10,6 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
@@ -25,6 +26,7 @@ public class RegisterDaoImpl implements RegisterDao {
     public RegisterDaoImpl(EntityManager theEntityManager) {
         entityManager = theEntityManager;
     }
+
     @Autowired
     public UserRoleMgtService userRoleMgtService;
     @Autowired
@@ -101,5 +103,25 @@ public class RegisterDaoImpl implements RegisterDao {
         // save or update the User
         Users obj = entityManager.merge(user);
 
+    }
+
+    // Check whether user was registered already or not
+    @Override
+    public boolean isSameUserName(String username) {
+        boolean result;
+        try {
+            String Qry = "SELECT u FROM Users u WHERE u.username = :username";
+            Query theQuery = entityManager.createQuery(Qry);
+            theQuery.setParameter("username", username);
+            if (theQuery.getResultList().size() > 0) {
+                result = true;
+            } else {
+                result = false;
+            }
+        } catch( Exception ex){
+            System.out.println("Error => "+ex);
+            result = true;
+        }
+        return result;
     }
 }

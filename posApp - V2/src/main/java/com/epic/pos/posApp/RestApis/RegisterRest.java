@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("register")
+@RequestMapping("ViewUser")
 public class RegisterRest {
 
     @Autowired
     public RegisterService registerService;
 
-    /**
+    /** ==> localhost:8080/ViewUser/ADD
      * {
      * 	"username":"jps2",
      * 	"userrole":24,
@@ -22,11 +22,15 @@ public class RegisterRest {
      * 	"password":"sdfgertyryhnjf"
      *
      * }*/
-    @PostMapping("/addNewUser")
+    @PostMapping("/ADD")
     public String add(@RequestBody RegisterInputBean inputBean){
         try{
-            registerService.save(inputBean);
-            return "success";
+            if(!registerService.isSameUserName(inputBean.getUsername())) {
+                registerService.save(inputBean);
+                return "success";
+            }else{
+                return "This User Name is already Registered";
+            }
         }
         catch(Exception ex){
             return "error=> "+ex;

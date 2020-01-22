@@ -35,7 +35,8 @@ public class WebMVCConfig extends WebMvcConfigurerAdapter {
         // ########### Type 2 ############ Real Interceptors ###########################################################
         //##############################################################################################################
         registry.addInterceptor(myInterceptor())
-                .addPathPatterns("/ViewUserRole/SEARCH/*");
+                .addPathPatterns("/ViewUser/ADD")  // for register user
+                .addPathPatterns("/ViewUserRole/SEARCH/*");  // for vice user by user name
         //##############################################################################################################
         //##############################################################################################################
 
