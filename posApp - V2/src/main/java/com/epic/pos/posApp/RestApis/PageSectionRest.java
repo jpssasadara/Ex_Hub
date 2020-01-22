@@ -15,13 +15,22 @@ public class PageSectionRest {
     @Autowired
     public SectionService sectionService;
 
+    /**localhost:8080/pageSection/AllSection
+    *Response ==>
+     * [
+     *     {
+     *         "sectioncode": "ADMINSEC",
+     *         "decription": "Admin Section"
+     *     },
+     *     {
+     *         "sectioncode": "CASESEC",
+     *         "decription": "Case Section"
+     *     },
+     */
     @GetMapping("/AllSection")
     public List<SectionDataBean> getAllPageSection(){
         return sectionService.getAllSection();
     }
-    /*@GetMapping("/AllSection2/{ff}/{hh}")
-    public String getAllPagekSection(@PathVariable String ff , @PathVariable String hh){
-        return "sasadara"+ff+" "+hh;
-    }*/
+
 
 }
