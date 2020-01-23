@@ -12,17 +12,17 @@
             </div>
             <div id="exampleInputGroup1" role="group" aria-describedby="exampleInputGroup1__BV_description_"
                  class="form-group">
-              <div><input id="exampleInput1" type="email" placeholder="Enter email..." required="required"
+              <div><input id="exampleInput1" type="text" placeholder="Enter Username..." required="required"
                           aria-required="true" class="form-control"
-                          aria-describedby="exampleInputGroup1__BV_description_">
+                          aria-describedby="exampleInputGroup1__BV_description_" name="username" [(ngModel)]="username">
                 <small tabindex="-1" id="exampleInputGroup1__BV_description_" class="form-text text-muted">We'll never
                   share your email with anyone else.
                 </small>
               </div>
             </div>
             <div id="exampleInputGroup2" role="group" class="form-group">
-              <div><input id="exampleInput2" type="password" placeholder="Enter password..." required="required"
-                          aria-required="true" class="form-control"></div>
+              <div><input id="exampleInput2" type="password" placeholder="Enter Password..." required="required"
+                          aria-required="true" class="form-control" name="password" [(ngModel)]="password"></div>
             </div>
             <div class="custom-control custom-checkbox"><input id="exampleCheck" type="checkbox" name="check"
                                                                autocomplete="off" class="custom-control-input"
@@ -38,7 +38,7 @@
             <div class="float-left"><a [routerLink]="" class="btn-lg btn btn-link">Recover
               Password</a></div>
             <div class="float-right">
-              <button type="button" class="btn btn-primary btn-lg">Login to Dashboard</button>
+              <button type="button" class="btn btn-primary btn-lg" (click)=checkLogin()>Login to Dashboard</button>
             </div>
           </div>
         </div>

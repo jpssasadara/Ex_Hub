@@ -70,19 +70,24 @@ public class LoginRest {
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
     public ResponseEntity<?> createAuthenticationToken(@RequestBody LoginInputBean loginInputBean) throws Exception {
 
-        // Use check whether UserName and PassWord are correct or not
-        authenticate(loginInputBean.getUsername(), loginInputBean.getPassword());
+        try {
+            // Use check whether UserName and PassWord are correct or not
+            authenticate(loginInputBean.getUsername(), loginInputBean.getPassword());
 
-        // there is a Query to get User object according to user name then that object has been set to the
-        // "UserDetails" => class
-        final UserDetails userDetails = userDetailsService.loadUserByUsername(loginInputBean.getUsername());
+            // there is a Query to get User object according to user name then that object has been set to the
+            // "UserDetails" => class
+            final UserDetails userDetails = userDetailsService.loadUserByUsername(loginInputBean.getUsername());
 
-        LoginDataBean userLogged = userDetailsService.loadAllDetailsOfLoggedUserByUsername(loginInputBean.getUsername());
+            LoginDataBean userLogged = userDetailsService.loadAllDetailsOfLoggedUserByUsername(loginInputBean.getUsername());
 
-        // Generating the Token using UserDetails object data (Really it has been used only user name and user Role (in this Application) so we can customized it as we want
-        final String token = jwtTokenUtil.generateToken(userDetails,userLogged.getUserrole());
-        // fixed token Response and return the token
-        return ResponseEntity.ok(new JwtResponse(token));
+            // Generating the Token using UserDetails object data (Really it has been used only user name and user Role (in this Application) so we can customized it as we want
+            final String token = jwtTokenUtil.generateToken(userDetails, userLogged.getUserrole());
+            // fixed token Response and return the token
+            return ResponseEntity.ok(new JwtResponse(token));
+        } catch(Exception ex){
+            System.out.println(ex);
+            return null;
+        }
     }
 
     private void authenticate(String username, String password) throws Exception {

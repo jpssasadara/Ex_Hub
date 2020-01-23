@@ -53,6 +53,7 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
 
 const routes: Routes = [
+  {path: '', component: LoginBoxedComponent, data: {extraParameter: ''}},
   {
     path: '',
     component: BaseLayoutComponent,
@@ -60,7 +61,7 @@ const routes: Routes = [
 
       // Dashboads
 
-      {path: '', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
+      {path: 'dashboardsMenu', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}},
 
       // Elements
 
@@ -108,11 +109,12 @@ const routes: Routes = [
 
       // User Pages
 
-      {path: 'pages/login-boxed', component: LoginBoxedComponent, data: {extraParameter: ''}},
+
       {path: 'pages/register-boxed', component: RegisterBoxedComponent, data: {extraParameter: ''}},
       {path: 'pages/forgot-password-boxed', component: ForgotPasswordBoxedComponent, data: {extraParameter: ''}},
     ]
   },
+
   {path: '**', redirectTo: ''}
 ];
 
