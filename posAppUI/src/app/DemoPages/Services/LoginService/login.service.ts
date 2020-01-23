@@ -9,6 +9,7 @@ export class LoginService {
   baseUrl = 'http://localhost:8080/login/authenticate';
   constructor(private http: HttpClient) { }
 
+  // login
   authenticate(username, password) {
     return this.http.post<any>(`${this.baseUrl}`, {username, password}).pipe(
         map(
@@ -21,5 +22,11 @@ export class LoginService {
         )
 
     );
+  }
+// check only Authentication
+  isUserLoggedIn() {
+    const user = sessionStorage.getItem('username')
+    // console.log(!(user === null))
+    return !(user === null)
   }
 }
