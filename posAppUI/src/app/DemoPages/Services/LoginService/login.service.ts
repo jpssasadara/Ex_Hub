@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import {JwtInputBean} from '../../MessageBeans/jwt-input-bean';
+import * as jwt_decode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ import { map } from 'rxjs/operators';
 export class LoginService {
   baseUrl = 'http://localhost:8080/login/authenticate';
   constructor(private http: HttpClient) { }
-
+  decoded: JwtInputBean
   // login
   authenticate(username, password) {
     return this.http.post<any>(`${this.baseUrl}`, {username, password}).pipe(
@@ -25,8 +27,10 @@ export class LoginService {
   }
 // check only Authentication
   isUserLoggedIn() {
-    const user = sessionStorage.getItem('username')
+      this.decoded = jwt_decode(sessionStorage.getItem('token'));
+      console.log('User Name from jwt  => ' + this.decoded.sub);
+      const user = sessionStorage.getItem('username')
     // console.log(!(user === null))
-    return !(user === null)
+      return (user === this.decoded.sub);
   }
 }

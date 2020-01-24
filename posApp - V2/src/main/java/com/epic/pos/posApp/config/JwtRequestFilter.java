@@ -29,9 +29,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
 			throws ServletException, IOException {
-
+		System.out.println("print2 Header ==> ");  // <== Monday start from here    sasadara !!!!!!!!!!!! get null when send angular
 		final String requestTokenHeader = request.getHeader("Authorization");
-
+		System.out.println("print2 Header ==> "+requestTokenHeader);
 		String username = null;
 		String jwtToken = null;
 		// JWT Token is in the form "Bearer token". Remove Bearer word and get

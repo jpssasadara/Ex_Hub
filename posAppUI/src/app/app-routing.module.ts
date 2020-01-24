@@ -54,6 +54,7 @@ import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
 import {AuthenticationAuthGaurdService} from './DemoPages/Services/AuthGaurd/AuthenticationOnly/authentication-auth-gaurd.service';
 
 const routes: Routes = [
+    // for login page
   {path: '', component: LoginBoxedComponent, data: {extraParameter: ''}},
   {
     path: '',
@@ -61,7 +62,6 @@ const routes: Routes = [
     children: [
 
       // Dashboads
-
       {path: 'dashboardsMenu', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}, canActivate:[AuthenticationAuthGaurdService]},
 
       // Elements

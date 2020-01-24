@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Color} from 'ng2-charts/ng2-charts';
+import {SectionService} from '../../Services/SectionService/section.service';
 
 @Component({
   selector: 'app-analytics',
@@ -151,8 +152,23 @@ export class AnalyticsComponent implements OnInit {
     responsive: true,
     maintainAspectRatio: false
   };
-
+  constructor(private secrtionservice: SectionService){}
   ngOnInit() {
+    this.getAllSection();
   }
-
+  getAllSection() {
+    console.log("sadarada");
+    this.secrtionservice.getAllSections()
+        .subscribe(data => {
+         // this.deviceList = data;
+          //this.collectionSize = this.deviceList.length;
+          console.log(data);
+          if (data == null) {
+            console.log('No Sections ');
+          } else {
+            console.log(data);
+            console.log(' Relevant Sections are loaded ');
+          }
+        });
+  }
 }
