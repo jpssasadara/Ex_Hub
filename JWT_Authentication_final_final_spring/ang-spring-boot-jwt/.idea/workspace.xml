@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d92697e9-3101-4be8-bd78-d446eeb3de51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/javainuse/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javainuse/config/WebSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Interceptors/basic-auth-htpp-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Interceptors/basic-auth-htpp-interceptor.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +24,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../posAppUI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../final_epic/web_Socket_Epic_POS_Final/2019-12-13/WebApp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,7 +110,7 @@
       <workItem from="1578546008944" duration="732000" />
       <workItem from="1578997955868" duration="5615000" />
       <workItem from="1579854347741" duration="3403000" />
-      <workItem from="1580096071798" duration="2180000" />
+      <workItem from="1580096071798" duration="2949000" />
     </task>
     <servers />
   </component>

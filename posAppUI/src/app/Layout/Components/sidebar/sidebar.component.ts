@@ -3,6 +3,8 @@ import {ThemeOptions} from '../../../theme-options';
 import {select} from '@angular-redux/store';
 import {Observable} from 'rxjs';
 import {ActivatedRoute} from '@angular/router';
+import {SectionService} from '../../../DemoPages/Services/SectionService/section.service';
+import {SectionInputBean} from '../../../DemoPages/MessageBeans/SectionBeans/section-input-bean';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +13,7 @@ import {ActivatedRoute} from '@angular/router';
 export class SidebarComponent implements OnInit {
   public extraParameter: any;
 
-  constructor(public globals: ThemeOptions, private activatedRoute: ActivatedRoute) {
+  constructor(private secrtionservice: SectionService, public globals: ThemeOptions, private activatedRoute: ActivatedRoute) {
 
   }
 
@@ -20,6 +22,7 @@ export class SidebarComponent implements OnInit {
   private newInnerWidth: number;
   private innerWidth: number;
   activeId = 'dashboardsMenu';
+  private  sectionInputBeans: SectionInputBean[];
 
   toggleSidebar() {
     this.globals.toggleSidebar = !this.globals.toggleSidebar;
@@ -38,7 +41,7 @@ export class SidebarComponent implements OnInit {
     });
 
     this.extraParameter = this.activatedRoute.snapshot.firstChild.data.extraParameter;
-
+    this.getAllSection();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -51,5 +54,22 @@ export class SidebarComponent implements OnInit {
       this.globals.toggleSidebar = false;
     }
 
+  }
+
+  getAllSection() {
+    console.log("sadarada");
+    this.secrtionservice.getAllSections()
+        .subscribe(data => {
+          // this.deviceList = data;
+          //this.collectionSize = this.deviceList.length;
+          //console.log(data);
+          if (data == null) {
+            console.log('No Sections ');
+          } else {
+            console.log(data);
+            this.sectionInputBeans = data;
+            console.log(' Relevant Sections are loaded ');
+          }
+        });
   }
 }

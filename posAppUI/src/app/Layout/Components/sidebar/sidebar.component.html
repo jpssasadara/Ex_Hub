@@ -9,7 +9,7 @@
             <span class="hamburger-inner"></span>
         </span>
       </button>
-    </div>
+    </div>  <!--sectionInputBeans-->
   </div>
   <div class="app-sidebar-content">
     <div class="app-sidebar-scroll">
@@ -17,6 +17,32 @@
         <div class="v-sidebar-menu vsm-default">
           <div class="vsm-list">
             <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" [activeIds]="extraParameter">
+              <!--############################################################################################-->
+              <ngb-panel *ngFor="let sectionName of sectionInputBeans index as i">
+                <ng-template ngbPanelHeader>
+                  <button ngbPanelToggle class="vsm-link">
+                    <i class="vsm-icon pe-7s-helm"></i>
+                    <span class="vsm-title">{{sectionName.decription}}</span>
+                    <i class="vsm-arrow"></i>
+                  </button>
+                </ng-template>
+                <ng-template ngbPanelContent  >
+                  <div class="vsm-dropdown">
+                    <div class="vsm-list" >
+                      <div class="vsm-item">
+                         <a routerLinkActive="active-item" routerLink="/institute/add" class="vsm-link"><span
+                                 class="vsm-title">Add New Institute</span></a>
+                       </div>
+                       <div class="vsm-item">
+                         <a routerLinkActive="active-item" routerLink="/institute/add" class="vsm-link"><span
+                                 class="vsm-title">Add New Institute</span></a>
+                       </div>
+
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-panel>
+              <!--############################################################################################-->
               <ngb-panel>
                 <ng-template ngbPanelHeader>
                   <div class="vsm-header">Main Navigation</div>
