@@ -18,7 +18,7 @@ export class SectionService {
   // for get all instance list
   getAllSections(): Observable<SectionInputBean[]> {
     console.log(sessionStorage.getItem('token'))
-    //const headers = new HttpHeaders({ Authorization: sessionStorage.getItem('token') });
+    // const headers = new HttpHeaders({ Authorization: sessionStorage.getItem('token') });
    // var headers = new HttpHeaders().set("Authorization",sessionStorage.getItem('token'));
 
     return this.http.get<SectionInputBean[]>(this.baseUrl);

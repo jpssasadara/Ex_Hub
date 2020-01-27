@@ -20,7 +20,7 @@
               <!--############################################################################################-->
               <ngb-panel *ngFor="let sectionName of sectionInputBeans index as i">
                 <ng-template ngbPanelHeader>
-                  <button ngbPanelToggle class="vsm-link">
+                  <button ngbPanelToggle class="vsm-link" (click)="getPagesFromUserRoleAndSection(sectionName.sectioncode)">
                     <i class="vsm-icon pe-7s-helm"></i>
                     <span class="vsm-title">{{sectionName.decription}}</span>
                     <i class="vsm-arrow"></i>
@@ -28,16 +28,11 @@
                 </ng-template>
                 <ng-template ngbPanelContent  >
                   <div class="vsm-dropdown">
-                    <div class="vsm-list" >
+                    <div class="vsm-list" *ngFor="let pageName of pageUserRoleinputbeans index as i" >
                       <div class="vsm-item">
                          <a routerLinkActive="active-item" routerLink="/institute/add" class="vsm-link"><span
-                                 class="vsm-title">Add New Institute</span></a>
+                                 class="vsm-title">{{pageName.description}}</span></a>
                        </div>
-                       <div class="vsm-item">
-                         <a routerLinkActive="active-item" routerLink="/institute/add" class="vsm-link"><span
-                                 class="vsm-title">Add New Institute</span></a>
-                       </div>
-
                     </div>
                   </div>
                 </ng-template>
