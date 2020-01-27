@@ -3,17 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d92697e9-3101-4be8-bd78-d446eeb3de51" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javainuse/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javainuse/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/RestApis/PageSectionRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/RestApis/PageSectionRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posApp - V2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../posApp - V2/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Dashboards/analytics/analytics.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Dashboards/analytics/analytics.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Services/AuthGaurd/AuthenticationOnly/authentication-auth-gaurd.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Services/AuthGaurd/AuthenticationOnly/authentication-auth-gaurd.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Services/LoginService/login.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/DemoPages/Services/LoginService/login.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../posAppUI/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../posAppUI/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/javainuse/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/javainuse/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../posApp - V2/src/main/java/com/epic/pos/posApp/config/WebSecurityConfig.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +25,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../posAppUI" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -120,6 +111,7 @@
       <workItem from="1578546008944" duration="732000" />
       <workItem from="1578997955868" duration="5615000" />
       <workItem from="1579854347741" duration="3403000" />
+      <workItem from="1580096071798" duration="2180000" />
     </task>
     <servers />
   </component>
