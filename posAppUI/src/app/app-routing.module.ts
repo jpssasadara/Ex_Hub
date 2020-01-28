@@ -52,6 +52,7 @@ import {LayoutComponent} from './DemoPages/Forms/Elements/layout/layout.componen
 
 import {ChartjsComponent} from './DemoPages/Charts/chartjs/chartjs.component';
 import {AuthenticationAuthGaurdService} from './DemoPages/Services/AuthGaurd/AuthenticationOnly/authentication-auth-gaurd.service';
+import {UserManagementViewComponent} from './DemoPages/UserManagement/user-management-view/user-management-view.component';
 
 const routes: Routes = [
     // for login page
@@ -60,7 +61,8 @@ const routes: Routes = [
     path: '',
     component: BaseLayoutComponent,
     children: [
-
+      // Registration
+      {path: 'ViewUser/VIEW', component: UserManagementViewComponent, data: {extraParameter: 'dashboardsMenu'}, canActivate:[AuthenticationAuthGaurdService]},
       // Dashboads
       {path: 'dashboardsMenu', component: AnalyticsComponent, data: {extraParameter: 'dashboardsMenu'}, canActivate:[AuthenticationAuthGaurdService]},
 

@@ -35,7 +35,7 @@
                   <div class="vsm-dropdown">
                     <div class="vsm-list" *ngFor="let pageName of pageUserRoleinputbeans index as i" >
                       <div class="vsm-item">
-                         <a routerLinkActive="active-item" routerLink="/institute/add" class="vsm-link"><span
+                         <a routerLinkActive="active-item" routerLink= "/{{pageName.url}}/VIEW" class="vsm-link"><span
                                  class="vsm-title">{{pageName.description}}</span></a>
                        </div>
                     </div>

@@ -17,7 +17,7 @@ export class UserBoxComponent implements OnInit {
        this.username = sessionStorage.getItem('username');
     }
   }
-
+  // logout
   logoutfunc(){
     this.loginservice.logOut();
     this.router.navigate(['/']);

@@ -104,6 +104,7 @@ import {DynamicChartComponent} from './DemoPages/Charts/chartjs/examples/dynamic
 import {DoughnutChartComponent} from './DemoPages/Charts/chartjs/examples/doughnut-chart/doughnut-chart.component';
 import {PieChartComponent} from './DemoPages/Charts/chartjs/examples/pie-chart/pie-chart.component';
 import {BasicAuthHtppInterceptorService} from './DemoPages/Interceptors/basic-auth-htpp-interceptor.service';
+import { UserManagementViewComponent } from './DemoPages/UserManagement/user-management-view/user-management-view.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -194,6 +195,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DynamicChartComponent,
     BubbleChartComponent,
     ScatterChartComponent,
+    UserManagementViewComponent,
   ],
   imports: [
     BrowserModule,

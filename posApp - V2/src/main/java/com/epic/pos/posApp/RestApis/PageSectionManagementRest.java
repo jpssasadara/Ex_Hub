@@ -12,7 +12,7 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "http://localhost:4200",allowedHeaders = "Authorization")
 @RequestMapping("pageSection")
-public class PageSectionRest {
+public class PageSectionManagementRest {
 
     @Autowired
     public SectionService sectionService;
