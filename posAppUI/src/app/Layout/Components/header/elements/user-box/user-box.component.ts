@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ThemeOptions} from '../../../../../theme-options';
+import {LoginService} from '../../../../../DemoPages/Services/LoginService/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-user-box',
@@ -7,10 +9,19 @@ import {ThemeOptions} from '../../../../../theme-options';
 })
 export class UserBoxComponent implements OnInit {
 
-  constructor(public globals: ThemeOptions) {
+  constructor(public loginservice: LoginService, public globals: ThemeOptions,private router: Router) {
+  }
+ username = null;
+  ngOnInit() {
+    if (sessionStorage.getItem('username') && sessionStorage.getItem('token')) {
+       this.username = sessionStorage.getItem('username');
+    }
   }
 
-  ngOnInit() {
+  logoutfunc(){
+    this.loginservice.logOut();
+    this.router.navigate(['/']);
   }
+
 
 }

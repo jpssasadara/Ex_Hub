@@ -33,4 +33,12 @@ export class LoginService {
     // console.log(!(user === null))
       return (user === this.decoded.sub);
   }
+  // Logout services
+    logOut() {
+      if ( sessionStorage.getItem('token') != null || sessionStorage.getItem('username') != null) {
+          sessionStorage.removeItem('username');
+          sessionStorage.removeItem('token');
+      }
+    }
+
 }

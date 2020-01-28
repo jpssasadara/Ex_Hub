@@ -12,12 +12,17 @@
     </div>  <!--sectionInputBeans-->
   </div>
   <div class="app-sidebar-content">
-    <div class="app-sidebar-scroll">
+    <div class="scroll-area-lg">
       <perfect-scrollbar [autoPropagation]="true">
         <div class="v-sidebar-menu vsm-default">
           <div class="vsm-list">
             <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" [activeIds]="extraParameter">
               <!--############################################################################################-->
+              <ngb-panel>
+                <ng-template ngbPanelHeader>
+                  <div class="vsm-header">Sections</div>
+                </ng-template>
+              </ngb-panel>
               <ngb-panel *ngFor="let sectionName of sectionInputBeans index as i">
                 <ng-template ngbPanelHeader>
                   <button ngbPanelToggle class="vsm-link" (click)="getPagesFromUserRoleAndSection(sectionName.sectioncode)">
