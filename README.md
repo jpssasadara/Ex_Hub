@@ -15,6 +15,7 @@ https://evisioncsse.blogspot.com/2020/01/intercepting-incoming-requests-using.ht
 
 High Level Architecture
 
+![Image 1](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200131_160520.jpg)
 ![Image 1](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200129_145800.jpg)
 ![Image 2](https://github.com/jpssasadara/Ex_Hub/blob/master/HighLevelArchi_posApp_Angular_%26_SpringBoot/20200107_175520.jpg)
 
