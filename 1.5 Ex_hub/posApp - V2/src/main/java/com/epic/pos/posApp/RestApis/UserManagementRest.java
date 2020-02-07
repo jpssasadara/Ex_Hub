@@ -17,31 +17,46 @@ public class UserManagementRest {
 
     @Autowired
     public LoginService loginService;
-    
+
     @Autowired
     public PermissionManagementService permission;
-    
+
     // $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Show Rests $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-   //##########################################################################################################################
+    //##########################################################################################################################
     @GetMapping("VIEW/show")
-    public boolean CanViewPage(HttpServletRequest request/*, HttpServletRequestWrapper httpServletRequestWrapper*/){
-    	//  Catch User Role From JWT Token and Permission which set in filter  -->
+    public boolean CanShowPage(HttpServletRequest request/*, HttpServletRequestWrapper httpServletRequestWrapper*/){
+        //  Catch User Role From JWT Token and Permission which set in filter  -->
         System.out.println(" Authentication Header JWT Token  catch from PageManagementRest  !!! ===> " + request.getHeader("Authorization"));
-        String jwtTokenFormHeader = request.getHeader("Authorization").substring(7);
-        //--<
-        return permission.HasPermission(request);   
-       
+        String jwtTokenFormHeader = request.getHeader("Authorization").substring(7);//--<
+        return permission.HasPermission(request);
     }
+    @GetMapping("ADD/show")
+    public boolean CanShowAddButton(HttpServletRequest request){
+        return permission.HasPermission(request);
+    }
+    @GetMapping("UPDATE/show")
+    public boolean CanShowUpdateButton(HttpServletRequest request){
+        return permission.HasPermission(request);
+    }
+    @GetMapping("DELETE/show")
+    public boolean CanShowDeleteButton(HttpServletRequest request){
+        return permission.HasPermission(request);
+    }
+    @GetMapping("SEARCH/show")
+    public boolean CanShowSearchButton(HttpServletRequest request){
+        return permission.HasPermission(request);
+    }
+
     //#########################################################################################################################
-    
+
     //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ Operation Rest $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     //#########################################################################################################################
-    
-    
+
+
     //#########################################################################################################################
-   
+
     /**localhost:8080/ViewUser/SEARCH/pos2
-    * Response ==>
+     * Response ==>
      * {
      *     "id": 39,
      *     "statusByPasswordstatus": "CHA",

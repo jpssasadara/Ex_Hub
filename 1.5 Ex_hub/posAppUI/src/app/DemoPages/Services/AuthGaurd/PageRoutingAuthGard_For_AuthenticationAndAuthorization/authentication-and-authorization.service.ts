@@ -23,22 +23,9 @@ export class AuthenticationAndAuthorizationService implements CanActivate {
     this.permission = await this.authsup.HasPermission(this.baseUrl2, route.url[0].toString(), route.url[1].toString(), 'show');
 
     console.log('Permission get from SuthSupport Services => ' + this.permission);
-    if (this.authService.isUserLoggedIn()) {
-      console.log(' User is Logged in NOW !! ');
-      this.login = true;
-    } else {
-      console.log(' Sorry No permission !! => User is not logged in ');
-      this.login = false;
-    }
-    try {
-      // for wait execution until response in come "Use <<await>> and <<async>> "
-      this.result = await this.http.get<any>(this.baseUrl2 + '/' + route.url[0] + '/' + route.url[1] + '/show').toPromise();
-    } catch (e) {
-      console.log(e);
-      this.result = false;
-    }
 
-    if (this.result && this.login) {
+
+    if (this.permission) {
       console.log(' You have permission !! ');
       return true;
     } else {
